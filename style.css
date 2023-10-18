@@ -1,0 +1,63 @@
+* {
+    user-select: none;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .world
+  {overflow: hidden;
+    position: relative;
+    /* width: 3000px;
+    height: 300px; */
+  }
+  .score
+  {
+    position: relative;
+    font-size: 3vmin;
+    /* fixing the postion of score box relative to screen   */
+    right: 1vmin; 
+    top: 1vmin;
+  }
+  .start_screen
+  {
+    position: absolute;
+    font-size: 5vmin;
+    /* center an element */
+    top: 50%;
+    left: 50%;
+    /* we dont know the dimension of parent  */
+    
+    transform: translate(-50%, -50%);
+    /* allows to move element along the X and Y axes */
+  }
+  .hide
+  {
+    display:none;
+  }
+  .ground
+  {
+    --left:0;
+    position: absolute;
+    width:300%;
+    bottom: 0;
+    left: calc(var(--left)*1%);
+  }
+  .dino {
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+  }
+  
+  .cactus {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+  }
