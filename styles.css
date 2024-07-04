@@ -38,7 +38,7 @@ body {
 .ground {
   --left: 0;
   position: absolute;
-  width: 300%;
+  width: 100%;
   bottom: 0;
   left: calc(var(--left) * 1%)
 }
