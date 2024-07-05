@@ -38,9 +38,12 @@ body {
 .ground {
   --left: 0;
   position: absolute;
-  width: 300%;
+  width: 259px; /* Ajusta esto al ancho de tu nueva imagen */
+  height: 194px; /* Ajusta esto a la altura de tu nueva imagen */
   bottom: 0;
-  left: calc(var(--left) * 1%)
+  left: calc(var(--left) * 1%);
+  background: url('path/to/your/new-image.jpg') repeat-x; /* Ajusta la ruta de la imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir el contenedor */
 }
 
 .dino {
