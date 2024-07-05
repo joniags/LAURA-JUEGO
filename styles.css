@@ -19,7 +19,7 @@ body {
 .score {
   position: absolute;
   font-size: 3vmin;
-  top: 5vmin;
+  top: 50vmin;
   left: 50%;
   transform: translateX(-50%);
 }
