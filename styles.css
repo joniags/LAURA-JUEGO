@@ -40,7 +40,7 @@ body {
   --left: 0;
   position: absolute;
   width: 2397px; /* Ajusta esto al ancho de tu nueva imagen */
-  height: 194px; /* Ajusta esto a la altura de tu nueva imagen */
+  height: 582px; /* Ajusta esto a la altura de tu nueva imagen */
   bottom: 0;
   left: calc(var(--left) * 1%);
   background: url('path/to/your/new-image.jpg') repeat-x; /* Ajusta la ruta de la imagen */
