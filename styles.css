@@ -39,7 +39,7 @@ body {
 .ground {
   --left: 0;
   position: absolute;
-  width: 4781px; /* Ajusta esto al ancho de tu nueva imagen */
+  width: 300%; /* Ajusta esto al ancho de tu nueva imagen */
   height: 582px; /* Ajusta esto a la altura de tu nueva imagen */
   bottom: 0;
   left: calc(var(--left) * 1%);
