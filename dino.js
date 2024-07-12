@@ -30,8 +30,21 @@ export function updateDino(delta, speedScale) {
 }
 
 export function getDinoRect() {
-   const hitbox = document.querySelector(".dino .hitbox");
-  return hitbox.getBoundingClientRect();
+  const rect = dinoElem.getBoundingClientRect()
+
+  // Ajusta estos valores según el tamaño deseado de la hitbox
+  const hitboxScale = 0.7 // Reduce el tamaño al 70%
+  const offsetX = (rect.width - rect.width * hitboxScale) / 2
+  const offsetY = (rect.height - rect.height * hitboxScale) / 2
+
+  return {
+    top: rect.top + offsetY,
+    left: rect.left + offsetX,
+    bottom: rect.bottom - offsetY,
+    right: rect.right - offsetX,
+    width: rect.width * hitboxScale,
+    height: rect.height * hitboxScale
+  }
 }
 
 export function setDinoLose() {
