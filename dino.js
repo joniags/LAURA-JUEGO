@@ -30,7 +30,8 @@ export function updateDino(delta, speedScale) {
 }
 
 export function getDinoRect() {
-  return dinoElem.getBoundingClientRect()
+   const hitbox = document.querySelector(".dino .hitbox");
+  return hitbox.getBoundingClientRect();
 }
 
 export function setDinoLose() {
@@ -69,9 +70,4 @@ function onJump(e) {
 
   yVelocity = JUMP_SPEED
   isJumping = true
-}
-
-export function getDinoRect() {
-  const hitbox = document.querySelector(".dino .hitbox");
-  return hitbox.getBoundingClientRect();
 }
