@@ -59,6 +59,16 @@ body {
   bottom: calc(var(--bottom) * 1%);
 }
 
+.dino .hitbox {
+  position: absolute;
+  width: 50%; /* Ajusta el tamaño según sea necesario */
+  height: 50%; /* Ajusta el tamaño según sea necesario */
+  top: 25%; /* Centra la hitbox verticalmente */
+  left: 25%; /* Centra la hitbox horizontalmente */
+  /* Puedes añadir un fondo temporal para ver la hitbox durante el desarrollo */
+  background-color: rgba(255, 0, 0, 0.5); /* Elimina esto después de ajustar */
+}
+
 .cactus {
   position: absolute;
   left: calc(var(--left) * 1%);
