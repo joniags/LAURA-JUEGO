@@ -70,3 +70,8 @@ function onJump(e) {
   yVelocity = JUMP_SPEED
   isJumping = true
 }
+
+export function getDinoRect() {
+  const hitbox = document.querySelector(".dino .hitbox");
+  return hitbox.getBoundingClientRect();
+}
