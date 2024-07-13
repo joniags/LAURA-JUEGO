@@ -13,6 +13,7 @@ const startScreenElem = document.querySelector("[data-start-screen]")
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
 document.addEventListener("keydown", handleStart, { once: true })
+document.addEventListener("touchstart", handleStart, { once: true }) // Añadir soporte táctil
 
 let lastTime
 let speedScale
@@ -68,14 +69,18 @@ function handleStart() {
   setupCactus()
   startScreenElem.classList.add("hide")
   window.requestAnimationFrame(update)
+  document.addEventListener("keydown", handleJump) // Añadir eventos de salto
+  document.addEventListener("touchstart", handleJump) // Añadir eventos de salto
 }
 
 function handleLose() {
   setDinoLose()
   setTimeout(() => {
     document.addEventListener("keydown", handleStart, { once: true })
+    document.addEventListener("touchstart", handleStart, { once: true }) // Añadir soporte táctil
     startScreenElem.classList.remove("hide")
   }, 100)
+ 
 }
 
 function setPixelToWorldScale() {
@@ -88,4 +93,8 @@ function setPixelToWorldScale() {
 
   worldElem.style.width = `${WORLD_WIDTH * worldToPixelScale}px`
   worldElem.style.height = `${WORLD_HEIGHT * worldToPixelScale}px`
+}
+function handleJump() {
+  if (isJumping()) return; // Verifica si el personaje ya está saltando
+  jump();
 }
