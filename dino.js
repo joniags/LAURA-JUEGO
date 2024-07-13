@@ -22,6 +22,9 @@ export function setupDino() {
   setCustomProperty(dinoElem, "--bottom", 0)
   document.removeEventListener("keydown", onJump)
   document.addEventListener("keydown", onJump)
+  document.removeEventListener("touchstart", onJump) // Añadir soporte táctil
+  document.addEventListener("touchstart", onJump) // Añadir soporte táctil
+
 }
 
 export function updateDino(delta, speedScale) {
