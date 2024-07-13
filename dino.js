@@ -87,3 +87,10 @@ function onJump(e) {
   yVelocity = JUMP_SPEED
   isJumping = true
 }
+export function jump() {
+  onJump();
+}
+
+export function isJumping() {
+  return isJumping;
+}
