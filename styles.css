@@ -55,7 +55,7 @@ body {
   --bottom: 0;
   position: absolute;
   left: 1%;
-  height: 50%;
+  height: 40%;
   bottom: calc(var(--bottom) * 1%);
 }
 
