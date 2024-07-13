@@ -33,7 +33,7 @@ export function getDinoRect() {
   const rect = dinoElem.getBoundingClientRect()
 
   // Ajusta estos valores según el tamaño deseado de la hitbox
-  const hitboxScale = 0.7 // Reduce el tamaño al 70%
+  const hitboxScale = 0.5 // Reduce el tamaño al 50%
   const offsetX = (rect.width - rect.width * hitboxScale) / 2
   const offsetY = (rect.height - rect.height * hitboxScale) / 2
 
